@@ -1,0 +1,12 @@
+{
+  "name": "davidbear-ai",
+  "version": "1.0.0",
+  "description": "DavidBear.AI — The Bear's Den",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
