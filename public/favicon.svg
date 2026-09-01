@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#13100d"/>
+  <!-- ears -->
+  <circle cx="8" cy="7" r="5" fill="#c9953a"/>
+  <circle cx="24" cy="7" r="5" fill="#c9953a"/>
+  <circle cx="8" cy="7" r="2.5" fill="#13100d"/>
+  <circle cx="24" cy="7" r="2.5" fill="#13100d"/>
+  <!-- head -->
+  <circle cx="16" cy="18" r="12" fill="#c9953a"/>
+  <!-- snout -->
+  <ellipse cx="16" cy="21" rx="5" ry="4" fill="#e4dcd0"/>
+  <!-- nose -->
+  <ellipse cx="16" cy="19.5" rx="2.2" ry="1.6" fill="#13100d"/>
+  <!-- eyes -->
+  <circle cx="11" cy="15" r="1.8" fill="#13100d"/>
+  <circle cx="21" cy="15" r="1.8" fill="#13100d"/>
+</svg>
