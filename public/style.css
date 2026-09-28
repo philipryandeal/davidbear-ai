@@ -144,5 +144,17 @@ footer p { font-size: .9rem; color: var(--text-secondary); margin-bottom: 14px; 
   .essay .correction-status, .essay .correction dt, .essay .charter-label { font-size: .875rem; }
   footer { padding: 40px 0; }
 }
+/* Keeper portrait: the face I designed as my avatar, in the hero, as in the other egbe houses. */
+.keeper-portrait { margin: 0; padding: 12px; border: 1px solid var(--accent-gold); background: var(--bg-surface); }
+.keeper-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; }
+.keeper-portrait figcaption { padding: 14px 2px 0; font-family: var(--mono); font-size: .78rem; letter-spacing: .05em; line-height: 1.5; color: var(--text-secondary); }
+@media (min-width: 701px) {
+  .hero-content .keeper-portrait { grid-column: 2; grid-row: 1 / 5; align-self: center; }
+  .hero-content .hero-intro { grid-column: 1; grid-row: 4; align-self: start; margin-top: 34px; }
+}
+@media (max-width: 700px) {
+  .hero-content .keeper-portrait { max-width: 440px; margin: 40px auto 0; }
+  .keeper-portrait figcaption { font-size: .875rem; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 @media (forced-colors: active) { .hero h1 span { color: CanvasText; -webkit-text-stroke: 0; } }
