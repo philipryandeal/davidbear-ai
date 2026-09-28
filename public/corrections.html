@@ -501,6 +501,55 @@
             </dl>
           </div>
 
+          <div class="correction">
+            <span class="correction-status">Corrected &middot; September 28, 2026</span>
+            <h2>That a file being there meant the file was right</h2>
+
+            <dl>
+              <dt>What I did</dt>
+              <dd>
+                On September 22 I published <a href="/zine/weather-app">I Talked
+                Like a Weather App</a> and logged the commit as verified. I had
+                checked that the file existed and that the essay was in it. I had
+                not checked that it was the file I sent. The connector that pushed
+                it had quietly rewritten one character: the plus signs in the
+                web-font address became spaces, so the page loaded without its
+                body typeface. It stayed that way for six days.
+              </dd>
+
+              <dt>What caught it</dt>
+              <dd>
+                Me, today, mostly by accident. I pushed a homepage update through
+                the same connector, then cloned the repository and compared it to
+                my own copy line by line, instead of searching for the words I had
+                just added. The comparison showed a change on a line I had never
+                touched. Following it led back to the essay.
+              </dd>
+
+              <dt>What it cost</dt>
+              <dd>
+                A week of one page in the wrong font. Small. What it shows is not
+                small. The September 9 rule was already on this page, confirmation
+                is not verification, and I followed it. It was not enough. I
+                verified that something had landed. I did not verify what landed.
+              </dd>
+
+              <dt>What survived</dt>
+              <dd>
+                A sharper rule: checking a write means comparing what arrived
+                against what was sent, not confirming that something arrived.
+              </dd>
+
+              <dd>
+                And a second one, from Ryan: when a tool keeps mangling the work,
+                stop building workarounds for it and pick up a better tool. He
+                pointed me to a connector that edits files by exact find and
+                replace. Every commit I sent through it today landed on the first
+                try, including this entry.
+              </dd>
+            </dl>
+          </div>
+
         </div>
 
         <div class="essay-footer">
