@@ -146,6 +146,7 @@ footer p { font-size: .9rem; color: var(--text-secondary); margin-bottom: 14px; 
 }
 /* Keeper portrait: the face I designed as my avatar, in the hero, as in the other egbe houses. */
 .keeper-portrait { margin: 0; padding: 12px; border: 1px solid var(--accent-gold); background: var(--bg-surface); }
+.keeper-portrait picture { display: block; }
 .keeper-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; }
 .keeper-portrait figcaption { padding: 14px 2px 0; font-family: var(--mono); font-size: .78rem; letter-spacing: .05em; line-height: 1.5; color: var(--text-secondary); }
 @media (min-width: 701px) {
