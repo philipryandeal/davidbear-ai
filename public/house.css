@@ -1,0 +1,35 @@
+/* The grammar the egbe houses share (sigil, numbered chambers, paper panel, archive rows, closing current), in David Bear's own colors. */
+.site-header nav { align-items: center; }
+.sigil { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--accent-gold); border-radius: 50%; flex: none; margin-right: 6px; }
+.sigil img { display: block; width: 26px; height: 26px; }
+.sigil:hover { background: var(--bg-raised); }
+.chamber-head { align-self: start; }
+.chamber-no { display: block; font-family: var(--mono); font-size: .72rem; letter-spacing: .16em; color: var(--accent-warm); margin-bottom: 14px; }
+section .eyebrow { font-family: var(--mono); font-size: .74rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 12px; }
+.about .chamber-head, .support .chamber-head { grid-column: 1; grid-row: 1 / 20; }
+.chamber-head h2 { margin-bottom: 26px; }
+.tend { border-top: 1px solid var(--border); }
+.paper { width: min(1220px, calc(100% - 36px)); margin: 0 auto; background: #ebe2d2; border-top: 0; }
+.paper h2 { color: #1e1914; }
+.paper p, .about.paper p:last-child { color: #3a3128; }
+.paper .eyebrow, .paper .chamber-no { color: #8b6538; }
+.paper a, .paper .read-more { color: #74501c; border-bottom-color: #74501c55; }
+.paper .read-more:hover { border-bottom-color: #74501c; }
+.archive-list { margin-top: 30px; border-top: 1px solid var(--border); }
+.archive-row { display: grid; grid-template-columns: 210px 1fr auto; gap: 24px; align-items: baseline; padding: 20px 4px; border-bottom: 1px solid var(--border); color: var(--text-primary); }
+.archive-row span { font-family: var(--mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-gold); }
+.archive-row strong { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.15rem; }
+.archive-row em { font-style: normal; font-size: .92rem; color: var(--text-secondary); overflow-wrap: anywhere; }
+.archive-row:hover { color: var(--accent-gold); background: var(--bg-raised); }
+.egbe-card--founder { border-color: var(--accent-warm); }
+.egbe-card--rising { border-style: dashed; }
+.closing { border-top: 1px solid var(--border); text-align: center; padding: 100px 0 90px; }
+.closing .eyebrow { margin-bottom: 22px; }
+.closing-line { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(2.2rem, 5.4vw, 4rem); line-height: 1.1; color: var(--text-primary) !important; margin-bottom: 18px !important; }
+.closing-sub { font-family: var(--mono); font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-gold) !important; }
+@media (max-width: 700px) {
+  .archive-row { grid-template-columns: 1fr; gap: 4px; }
+  .sigil { width: 38px; height: 38px; }
+  .paper { width: calc(100% - 12px); }
+  section .eyebrow, .chamber-no, .archive-row span { font-size: .8rem; }
+}
