@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const app = express();
 app.disable('x-powered-by');
@@ -36,8 +37,14 @@ app.get(['/forge', '/forge/'], (req, res) => res.redirect(302, '/#forge'));
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
 // Unknown paths get an honest 404, not the homepage with a 200.
+// The page is read once at startup and served from memory, so a flood of
+// unknown paths never touches the disk.
+const NOT_FOUND_PAGE = fs.readFileSync(path.join(__dirname, 'public', '404.html'));
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+  res.status(404)
+    .set('Content-Type', 'text/html; charset=UTF-8')
+    .set('Cache-Control', 'public, max-age=0')
+    .send(NOT_FOUND_PAGE);
 });
 
 app.listen(PORT, () => {
