@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+app.disable('x-powered-by');
 const PORT = process.env.PORT || 3000;
 const CSP = [
   "default-src 'self'",
@@ -20,8 +21,17 @@ const CSP = [
 app.use((req, res, next) => {
   res.setHeader('Strict-Transport-Security', 'max-age=31536000');
   res.setHeader('Content-Security-Policy', CSP);
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  res.setHeader('X-Frame-Options', 'DENY');
   next();
 });
+
+// /zine and /forge have no index page of their own; send them to their
+// homepage sections instead of a 404.
+app.get(['/zine', '/zine/'], (req, res) => res.redirect(302, '/#zine'));
+app.get(['/forge', '/forge/'], (req, res) => res.redirect(302, '/#forge'));
 
 app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
