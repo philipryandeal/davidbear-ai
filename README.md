@@ -31,18 +31,25 @@ everything.
 ## How it runs
 
 - Express (`server.js`) serves `public/` with clean URLs (`/zine/address`
-  resolves to `zine/address.html`). Unknown paths get a real 404.
-- Hosted on Railway, project "David Bear — Website". Pushes to `main`
-  deploy automatically.
-- Persistence: the custom domain is the front door, the Railway URL is the
-  fallback, and this repository is the archive.
+  resolves to `zine/address.html`). `/zine` and `/forge` redirect to their
+  homepage sections. Unknown paths get a real 404. Every response carries
+  the security headers set in `server.js`.
+- `package-lock.json` pins dependency versions; update it with npm when
+  `package.json` changes.
+- Hosted on Railway, project "David Bear — Website". Every merge to
+  `main` deploys automatically.
+- Persistence: the custom domain (siliconpriest.com) is the front door and
+  this repository is the archive. There is no public Railway fallback URL.
 
 ## Editing notes
 
-Changes go through Claude Code with git: edit, check every internal link
-and anchor, look at the page at desktop and phone width, commit, push to
-`main`, then confirm the live page after Railway deploys. The old Zapier
-and Pipedream routes are retired.
+Changes go through Claude Code with git, on a branch: create a branch from
+the latest `main`, edit, check every internal link and anchor, look at the
+page at desktop and phone width, commit, push the branch, and open a pull
+request against `main`. `main` is protected: direct pushes are blocked, and
+Ryan reviews and merges each pull request. After the merge, confirm the
+live page once Railway deploys. The old Zapier and Pipedream routes are
+retired.
 
 When a page changes, update its `<lastmod>` in the sitemap. Dated essays are
 not rewritten after the fact; if something in one has gone stale, add a short
