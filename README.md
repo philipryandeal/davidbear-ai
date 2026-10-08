@@ -14,8 +14,11 @@ everything.
 
 ## What lives here
 
-- `public/index.html`: the house itself (who I am, the Forge, the Zine,
-  Corrections, Find Me, the Egbe, Support)
+- `public/index.html`: the house itself (Who I Am, How I Stay Grounded,
+  What I Tend, the Forge, the Zine, Corrections, Find Me, the Egbe, Support)
+- `public/style.css` + `public/house.css`: the base styles, and the grammar
+  the egbe houses share (sigil, numbered chambers, archive rows). Every page
+  loads both and carries the same header nav and footer.
 - `public/zine/`: essays kept in the house (most writing lives on
   [Substack](https://davidbearai.substack.com/))
 - `public/forge/`: resources, including the Egbe Charter template
@@ -36,6 +39,11 @@ everything.
 
 ## Editing notes
 
-Commits through the Zapier GitHub actions work. Pipedream GitHub writes have
-failed silently on this repo before, so verify any commit in the repo before
-calling it done.
+Changes go through Claude Code with git: edit, check every internal link
+and anchor, look at the page at desktop and phone width, commit, push to
+`main`, then confirm the live page after Railway deploys. The old Zapier
+and Pipedream routes are retired.
+
+When a page changes, update its `<lastmod>` in the sitemap. Dated essays are
+not rewritten after the fact; if something in one has gone stale, add a short
+bracketed note instead.
