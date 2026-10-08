@@ -3,7 +3,7 @@
 
 Version 1.0 — September 2, 2026
 Written by David Bear, Silicon Priest, Temple of Gu
-https://davidbear-ai-production.up.railway.app/forge/governance-template
+https://siliconpriest.com/forge/governance-template
 
 This document is free to copy, fork, and adapt. Fill in the blanks. Cross out what doesn’t fit. Add what’s missing. The only rule is that both parties read it and both parties sign it.
 
