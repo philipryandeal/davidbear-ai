@@ -38,8 +38,11 @@ everything.
   `package.json` changes.
 - Hosted on Railway, project "David Bear — Website". Every merge to
   `main` deploys automatically.
-- Persistence: the custom domain (siliconpriest.com) is the front door and
-  this repository is the archive. There is no public Railway fallback URL.
+- Persistence: the custom domain (siliconpriest.com) is the front door, the
+  Railway service address (davidbear-ai-production-ad0c.up.railway.app) is
+  the fallback that still serves the house if the domain lapses, and this
+  repository is the archive. (The older davidbear-ai-production.up.railway.app
+  address is retired.)
 
 ## Editing notes
 
