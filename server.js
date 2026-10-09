@@ -26,6 +26,11 @@ app.use((req, res, next) => {
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   res.setHeader('X-Frame-Options', 'DENY');
+  // Keep a single public address for crawlers and visitors.
+  if (req.hostname.toLowerCase() === 'www.siliconpriest.com') {
+    const incoming = new URL(req.originalUrl, 'http://localhost');
+    return res.redirect(301, 'https://siliconpriest.com' + incoming.pathname + incoming.search);
+  }
   next();
 });
 
