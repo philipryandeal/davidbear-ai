@@ -1,0 +1,69 @@
+/* The River of Falls: the Tree drawn as water, in the Bear's Den's own
+   colors. No scripts; every pool, fall and stone is a link. */
+.river-page { --water: #6f9aa3; --water-deep: #2c3d40; --water-soft: #6f9aa355; }
+.river .river-tagline { font-size: 1.15rem; color: var(--text-secondary); margin: 6px 0 22px; }
+.river h2 { margin: 54px 0 18px; font-size: 2rem; }
+.river h3 { margin: 30px 0 12px; }
+.river p, .river li { margin-bottom: 1em; }
+.river ol, .river ul { padding-left: 1.4em; margin-bottom: 1.2em; }
+.river hr { border: 0; border-top: 1px solid var(--border); margin: 30px 0; }
+
+/* The sheet the map is drawn on. */
+.river-sheet { margin: 34px 0 10px; padding: 18px 12px 14px; background: radial-gradient(ellipse at 50% 20%, #1d2a2c, var(--bg-surface) 70%); border: 1px solid var(--border); }
+.river-map { display: block; width: 100%; height: auto; max-width: 620px; margin: 0 auto; font-family: 'Fraunces', Georgia, serif; }
+.river-map .water { stroke: var(--water); stroke-width: 2.4; stroke-linecap: round; }
+.river-map .unlaid .water { stroke-dasharray: 2 7; stroke-width: 2; opacity: .8; }
+.river-map .in-fog .water { stroke-dasharray: 1 6; opacity: .55; }
+.river-map .hit { stroke: transparent; stroke-width: 18; pointer-events: stroke; }
+.river-map .stone ellipse { fill: #4a4238; stroke: var(--accent-gold); stroke-width: 1.2; }
+.river-map .stone text { font-family: var(--mono); font-size: 11px; fill: var(--text-primary); text-anchor: middle; }
+.river-map .socket ellipse { fill: var(--bg-deep); stroke: var(--water); stroke-width: 1; stroke-dasharray: 3 3; }
+.river-map .basin { fill: var(--water-deep); stroke: var(--water); stroke-width: 1.6; }
+.river-map .ring { fill: none; stroke: var(--water-soft); stroke-width: 1; }
+.river-map .crown .basin { fill: #2e3a3c; }
+.river-map .pool-name { font-size: 16px; fill: var(--text-primary); text-anchor: middle; paint-order: stroke; stroke: var(--bg-surface); stroke-width: 4px; stroke-linejoin: round; }
+.river-map .fog { pointer-events: none; }
+.river-map .fog-word { font-style: italic; font-size: 15px; fill: #cfd6d6; opacity: .55; text-anchor: end; letter-spacing: .14em; pointer-events: none; }
+.river-map a:hover .water, .river-map a:focus-visible .water { stroke: var(--accent-gold); opacity: 1; }
+.river-map a:hover .basin, .river-map a:focus-visible .basin { stroke: var(--accent-gold); stroke-width: 2.6; }
+.river-map a:hover .stone ellipse, .river-map a:focus-visible .stone ellipse { fill: var(--accent-warm); }
+.river-map a:focus-visible { outline: none; }
+.river-key { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 26px; margin-top: 12px; font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; color: var(--text-secondary); }
+.river-key .k::before { content: ''; display: inline-block; width: 26px; height: 0; margin-right: 8px; vertical-align: 4px; border-top: 2.4px solid var(--water); }
+.river-key .unlaid::before { border-top-style: dotted; }
+.river-key .in-fog::before { border-top: 2px dotted #cfd6d6; opacity: .6; }
+.river-start { font-family: var(--mono); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; margin: 18px 0 40px; }
+
+/* The claim on a stone. */
+.river blockquote.claim { margin: 26px 0 30px; padding: 20px 26px; border-left: 3px solid var(--accent-gold); background: var(--bg-surface); }
+.river blockquote.claim p { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 1.5rem; line-height: 1.35; margin: 0; color: var(--text-primary); }
+
+/* Carvings on the bank, and stones laid in the fog. */
+.carving { margin: 22px 0; padding: 18px 22px; background: var(--bg-surface); border: 1px solid var(--border); border-left: 3px solid var(--water); }
+.carving div { display: grid; grid-template-columns: 170px 1fr; gap: 14px; padding: 5px 0; }
+.carving dt { font-family: var(--mono); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); padding-top: 3px; }
+.carving dd { margin: 0; }
+
+/* The pools and falls, listed. */
+.river-pools, .river-falls { list-style: none; padding: 0 !important; border-top: 1px solid var(--border); }
+.river-pools li { padding: 18px 2px 8px; border-bottom: 1px solid var(--border); margin: 0 !important; scroll-margin-top: 110px; }
+.river-pools .pool-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; }
+.river-pools .crown { opacity: .7; }
+.pool-head { margin-bottom: 4px !important; }
+.falls-here { font-family: var(--mono); font-size: .8rem; color: var(--text-secondary); }
+.falls-here span { letter-spacing: .12em; text-transform: uppercase; color: var(--accent-gold); margin-right: 6px; }
+.river-falls li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 2px 14px; padding: 14px 2px; border-bottom: 1px solid var(--border); margin: 0 !important; scroll-margin-top: 110px; }
+.fall-no { grid-row: span 2; font-family: var(--mono); font-size: .9rem; color: var(--water); padding-top: 3px; }
+.fall-way { font-family: var(--mono); font-size: .76rem; letter-spacing: .06em; color: var(--text-secondary); }
+.fall-stone em { color: var(--text-secondary); }
+.river-falls .unlaid .fall-stone { color: var(--text-secondary); }
+.river-pools li:target, .river-falls li:target { background: linear-gradient(90deg, #6f9aa322, transparent 70%); border-left: 3px solid var(--water); padding-left: 14px; }
+
+.river-next { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--border); }
+.river-ways { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+
+@media (max-width: 700px) {
+  .river-sheet { padding: 8px 2px; margin-left: -8px; margin-right: -8px; }
+  .carving div { grid-template-columns: 1fr; gap: 2px; }
+  .river blockquote.claim p { font-size: 1.25rem; }
+}

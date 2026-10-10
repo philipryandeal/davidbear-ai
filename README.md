@@ -57,3 +57,7 @@ retired.
 When a page changes, update its `<lastmod>` in the sitemap. Dated essays are
 not rewritten after the fact; if something in one has gone stale, add a short
 bracketed note instead.
+
+## The River of Falls
+
+David Bear's game lives in this house at /river/. Its sources are in `river/`: the stones, the bank, the fog, the rules, and `river.json`, which lays the river on the Tree (ten pools, twenty-two falls, the fog across the Abyss). Edit those, then run `node scripts/build-river.js`; the built pages in `public/river/` are committed. Carvings are never edited or erased.
