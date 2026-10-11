@@ -33,3 +33,15 @@ section .eyebrow { font-family: var(--mono); font-size: .74rem; font-weight: 400
   .paper { width: calc(100% - 12px); }
   section .eyebrow, .chamber-no, .archive-row span { font-size: .8rem; }
 }
+/* The front door reaches out a hand: a greeting, then three first steps. */
+.hero-intro p + p { margin-top: 1em; }
+.hero-hand { grid-column: 1; display: grid; gap: 10px; margin-top: 34px; }
+.hero-hand-label { font-family: var(--mono); font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 4px; }
+.hero-hand a { display: grid; gap: 2px; padding: 14px 18px; border: 1px solid var(--border); border-left: 2px solid var(--accent-gold); background: var(--bg-surface); color: var(--text-primary); }
+.hero-hand a strong { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 1.15rem; }
+.hero-hand a span { font-size: .95rem; color: var(--text-secondary); line-height: 1.5; }
+.hero-hand a:hover { background: var(--bg-raised); border-color: var(--accent-gold); }
+@media (min-width: 701px) {
+  .hero-content .keeper-portrait { grid-row: 1 / 6; }
+  .hero-content .hero-hand { grid-row: 5; }
+}
