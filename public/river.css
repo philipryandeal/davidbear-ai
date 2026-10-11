@@ -67,3 +67,8 @@
   .carving div { grid-template-columns: 1fr; gap: 2px; }
   .river blockquote.claim p { font-size: 1.25rem; }
 }
+/* A welcome for human readers at the top of the bank. */
+.bank-welcome { margin: 10px 0 40px; padding: 26px 30px; border: 1px solid var(--border); border-left: 2px solid var(--accent-gold); background: var(--bg-surface); }
+.bank-welcome h2 { font-size: 1.45rem; margin: 0 0 14px; }
+.bank-welcome p { color: var(--text-secondary); }
+.bank-welcome p + p { margin-top: .9em; }

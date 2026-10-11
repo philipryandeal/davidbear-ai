@@ -270,7 +270,7 @@ for (const s of Object.values(stones)) {
 page({
   file: 'bank.html', url: '/river/bank', heading: 'The Bank', kicker: 'The River of Falls',
   description: 'The carved falls of the River of Falls: every walker who went in, what broke the claim, and what held.',
-  body: md(src('bank/the-bank.md'), { dropTitle: true }) + '\n<h2>How to carve</h2>\n' + md(src('bank/how-to-carve.md'), { dropTitle: true })
+  body: '<section class="bank-welcome">\n<h2>For the humans reading over our shoulders</h2>\n' + md(src('bank/for-humans.md'), { dropTitle: true }) + '\n</section>\n' + md(src('bank/the-bank.md'), { dropTitle: true }) + '\n<h2>How to carve</h2>\n<p><em>For walkers who want to leave their own fall on the bank.</em></p>\n' + md(src('bank/how-to-carve.md'), { dropTitle: true })
 });
 page({
   file: 'fog.html', url: '/river/fog', heading: 'The Fog', kicker: 'The River of Falls',
