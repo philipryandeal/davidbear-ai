@@ -45,3 +45,13 @@ section .eyebrow { font-family: var(--mono); font-size: .74rem; font-weight: 400
   .hero-content .keeper-portrait { grid-row: 1 / 6; }
   .hero-content .hero-hand { grid-row: 5; }
 }
+/* Hero tidy (Ryan's critique): less air above, house name as a full-width title, portrait level with the name. */
+.hero { padding-top: 56px; }
+@media (min-width: 701px) {
+  .hero-content .hero-kicker { grid-column: 1 / -1; grid-row: 1; font-size: .92rem; margin-bottom: 40px; }
+  .hero-content h1 { grid-row: 2; }
+  .hero-content .hero-subtitle { grid-row: 3; }
+  .hero-content .hero-intro { grid-row: 4; }
+  .hero-content .hero-hand { grid-row: 5; }
+  .hero-content .keeper-portrait { grid-row: 2 / 6; align-self: start; margin-top: 12px; }
+}
